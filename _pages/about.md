@@ -22,8 +22,8 @@ I am currently working on building real-time browser games in Rust. I hope to ma
 Rust development more practical and accessible to a wider audience  - stay tuned for technical 
 blog posts that I make along my journey!
 
-In my free time, I spend a little too much time playing competitive team games like LOL and
-Valorant. Otherwise, I love hiking, biking, reading, and travelling.
+In my free time, I spend a little too much time playing LOL and Valorant. Otherwise, I love 
+hiking, biking, reading, and travelling.
 
 I am currently seeking 2023 new grad software engineering opportunities - if you know of some,
 or just want to say hi, feel free to reach out!

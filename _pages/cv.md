@@ -4,5 +4,5 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 3
-cv_pdf: shreyaskrishnaprasad_resume.pdf
+cv_pdf: shreyasprasad_resume.pdf
 ---
