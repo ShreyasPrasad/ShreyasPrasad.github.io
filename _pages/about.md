@@ -15,10 +15,10 @@ social: true  # includes social icons at the bottom of the page
 
 Hi! I am a recent University of Waterloo Computer Science graduate exploring the world of 
 real-time systems, compilers, and where modern languages like Rust 🦀 fit in. I have previously
-interned at Snowflake, Amazon, and Arctic Wolf, working on building performant distributed 
-systems and infrastructure.
+interned at Snowflake, Amazon, and Arctic Wolf, working on designing and building performant 
+distributed systems and infrastructure.
 
-I am currently working on real-time browser games like <a> CodeMafia. I hope to make full stack 
+I am currently working on building real-time browser games in Rust. I hope to make full stack 
 Rust development more practical and accessible to a wider audience  - stay tuned for technical 
 blog posts that I make along my journey!
 
