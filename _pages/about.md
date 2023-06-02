@@ -13,7 +13,7 @@ latest_posts: false  # includes a list of the newest posts
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi! I am a recent University of Waterloo Computer Science graduate exploring the world of 
+Hi! I am a University of Waterloo Computer Science student exploring the world of 
 real-time systems, compilers, and where modern languages like Rust 🦀 fit in. I have previously
 interned at Snowflake, Amazon, and Arctic Wolf, working on designing and building performant 
 distributed systems and infrastructure.
