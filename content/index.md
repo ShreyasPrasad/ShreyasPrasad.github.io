@@ -1,7 +1,7 @@
 ---
 title: Hi!
 ---
-Hi! I'm Shreyas, a recent Computer Science graduate from the University of Waterloo interested in distributed systems, operating systems, and event-driven computing. I'm currently working on task scheduling services @AWS.
+Hi! I'm Shreyas, a recent Computer Science graduate from the University of Waterloo interested in distributed systems, operating systems, and event-driven computing. I'm currently working on task scheduling services @AWS in Vancouver.
 
 ![[self.jpeg| center | 300]]
 
