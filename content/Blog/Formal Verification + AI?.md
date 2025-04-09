@@ -1,8 +1,8 @@
 ### What's formal verification?
 
-I recently learned about software formal verification tools like [TLA+](https://lamport.azurewebsites.net/tla/tla.html) and [Alloy](https://alloytools.org/applications.html). These tools are magical - they let you model your distributed system as a state machine and verify that conditions you define, known as `invariants` are satisfied in all possible states.
+I recently learned about software formal verification tools like [TLA+](https://lamport.azurewebsites.net/tla/tla.html) and [Alloy](https://alloytools.org/applications.html). These tools are magical - they let you model your distributed system as a state machine and verify that conditions you define, known as `invariants`, are satisfied in all possible states.
 
-Questions like:
+Questions like:s
 
 ```
 What if our database write fails here?
