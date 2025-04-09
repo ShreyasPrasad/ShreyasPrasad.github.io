@@ -51,6 +51,43 @@ What isn't immediately obvious to a CustomResource user is that CloudFormation i
 For example, if your `Create` handler creates a resource that completes initialization asynchronously, you have to make sure to wait for this to complete. Otherwise, if a `Delete` handler is invoked for the same resource in the meantime, and the asynchronous resource creation later finishes, you could be left with a resource existing when it shouldn't. This is an inconsistent resource state that is hard to reconcile through handler code changes. You can read more about how CloudFormation decides when you invoke your handlers [here](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html).
 
 Debugging these edge cases is a nightmare and makes it impractical to manage complex CustomResources. Instead, keep CustomResource handlers simple. Each handler should ideally have nothing more than a single synchronous API call or even better, simply mutate existing resources rather than create/delete them.
+### 3. Don't make your CDK a monolith
+
+The huge advantage of using the CDK is that it allows you to apply software best practices with infrastructure development. You should be using many `Constructs` to modularize your code, and only deploy a handful of stacks.
+
+```
+A good directory structure for CDK projects.
+
+stacks/
+ frontend-infra.ts
+ backend-infra.ts
+
+constructs/
+ ddb_table.ts
+ worker_lambda.ts
+ load_balancer.ts
+
+Each construct is its own self-contained component, and can be re-used across any number of stacks.
+```
+
+Using only a few stacks allows you to reduce the probability of a cross-stack dependency occurring. This is a really nasty chicken/egg bug where one stack depends on a resource owned by another stack. This prevents deletion of the owning stack since doing so would invalidate the resource reference the dependent stack holds.
+
+Further, if you reach the hard limit of 500 resources per stack, you can use nested stacks to circumvent this. A stack can contain any number of nested stacks, where each nested stack counts as only a single resource in the parent stack. So you can define *thousands* of resources per parent stack by isolating groups of resources at the nested stack level. This is great for teams that want to simplify their infrastructure by ultimately only deploying a few templates. Our team found that feature-driven nested stacks were a huge benefit; each nested stack contains all the resources associated with a certain feature in the project.
+
+```
+An effective feature-driven organization pattern for nested stacks. Each nested stack is a resource in the frontend-infra parent stack.
+
+stacks/
+ frontend/
+   nested/
+     api_fleet.ts
+     load_tests.ts
+     cloudwatch_dashboards.ts
+   frontend-infra.ts
+```
+
+
+
 
 
 
