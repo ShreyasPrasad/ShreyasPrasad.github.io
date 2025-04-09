@@ -1,0 +1,20 @@
+### What's formal verification?
+
+I recently learned about software formal verification tools like TLA+. This stuff is magical - its lets you model your distributed system as a state machine verify that conditions you define, known as `invariants` are satisfied in all possible states.
+
+Questions like:
+
+```
+What if our database write fails here?
+What if we can't get the lock on this shared resource?
+What if I get hit by a bus on the way to work tomorrow?
+What if this asynchronous operation finishes before another one?
+```
+
+and more can be defined by modelling and verifying your software's operations exhaustively.  
+
+### Ok cool, what's a model and how do I make one?
+
+Tools like TLA+ require a model. A model is some representation of your system's states, data, state transitions, and invariants. Let's start with a simple example and eventually use TLA+ to verify it.
+
+
