@@ -18,7 +18,7 @@ The reason for this is that these fields tell the VPC how to allocate IP address
 
 ### 2. Custom resources are more trouble then they're worth
 
-Custom resources sound like a fairy tale at first. Can't meet your use-case with pre-existing AWS CDK resources? That's fine, just implement a few simple CloudFormation handlers in a Lambda, and then attach it to CustomResource. Now you can reference it like any other resource in the CDK and do exactly what you want. WRONG!
+Custom resources sound like a fairy tale at first. Can't meet your use-case with pre-existing AWS CDK resources? That's fine, just implement a few simple CloudFormation handlers in a Lambda, and then attach it to CustomResource. Now you can reference it like any other resource in the CDK and do exactly what you want. **WRONG!**
 
 ```js
 const handler = new lambda.Function(this , 'my-handler', {
