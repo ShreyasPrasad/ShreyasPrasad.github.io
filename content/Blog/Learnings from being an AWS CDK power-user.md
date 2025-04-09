@@ -75,7 +75,8 @@ Using only a few stacks allows you to reduce the probability of a cross-stack de
 Further, if you reach the hard limit of 500 resources per stack, you can use nested stacks to circumvent this. A stack can contain any number of nested stacks, where each nested stack counts as only a single resource in the parent stack. So you can define *thousands* of resources per parent stack by isolating groups of resources at the nested stack level. This is great for teams that want to simplify their infrastructure by ultimately only deploying a few templates. Our team found that feature-driven nested stacks were a huge benefit; each nested stack contains all the resources associated with a certain feature in the project.
 
 ```
-An effective feature-driven organization pattern for nested stacks. Each nested stack is a resource in the frontend-infra parent stack.
+An effective feature-driven organization pattern for nested stacks. 
+Each nested stack is a resource in the frontend-infra parent stack.
 
 stacks/
  frontend/
