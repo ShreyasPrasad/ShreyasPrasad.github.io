@@ -17,7 +17,7 @@ and more can be defined by modelling and verifying your software's operations ex
 
 Tools like Alloy require a model. A model is some representation of your system's states, data, state transitions, and invariants. Let's start with a simple example and eventually use Alloy to verify it. We prefer to use Alloy here to demonstrate a higher-level use-case. TLA+ is much more verbose and less intuitive, based on its origins in mathematics.
 
-Say that your side-hustle is selling personalized knitted sweaters. You make a website where anyone can place an order. You write some code to automate the checkout process. After a while, your customer's start complaining. They report being charged despite not receiving a Sweater! To get to the bottom of this, you decide to model your software using an Alloy model, hoping that its verifier can tell you if there's bugs with your implementation.
+Say that your side-hustle is selling personalized knitted sweaters. You make a website where anyone can place an order. You write some code to automate the checkout process. After a while, your customers start complaining. They report being charged despite not receiving a Sweater! To get to the bottom of this, you decide to model your software using an Alloy model, hoping that its verifier can tell you if there's bugs with your implementation.
 
 > [!Installing Alloy]
 > Alloy editor/visualizer can be downloaded [here](https://alloytools.org/download.html).
