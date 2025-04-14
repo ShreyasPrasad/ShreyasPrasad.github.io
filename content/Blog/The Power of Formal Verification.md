@@ -127,7 +127,7 @@ Executing "Check CustomerOrdersFulfilled for 1 StartState, 2 State, exactly 2 Cu
 
 This is the state tree in Alloy's counter-example:
 
-![[Screenshot 2025-04-13 at 11.36.21 PM.png]]
+![[alloy-counterexample.png]]
 
 It turns out that when we were fulfilling orders, we weren't making sure that each customer was receiving a unique sweater! In this case, both Customer0 and Customer1 placed orders in the `StartState` and in the next `State`, Sweater0 was assigned to two customers!
 
