@@ -58,7 +58,7 @@ fact {
 	all m: Money | one c: Customer | (c->m) in StartState.customers
 	// No Sweater is owned in the StartState
 	all s: Sweater | all c: Customer | (s->c) not in StartState.sweaters
-    // The StartState defines all Customer->Money mappings and they don't change.
+	// The StartState defines all Customer->Money mappings and they don't change.
 	all t: State | no(t.customers - StartState.customers)
 }
 ```
