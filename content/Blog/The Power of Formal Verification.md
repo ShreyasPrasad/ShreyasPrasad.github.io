@@ -102,7 +102,7 @@ It's finally time to invoke these predicates and see if there's any bugs.
 
 ### Checking Correctness Using Assertions
 
-We use the assert keyword to define an assertion. This assertion makes sure that for all pairs of states where one `State` is the result of an order processed on the previous `State`, each `Sweater` in the final `State` is uniquely owned.
+We use the `assert` keyword to define an assertion. This assertion makes sure that for all pairs of states where one `State` is the result of an order processed on the previous `State`, each `Sweater` in the final `State` is uniquely owned.
 
 ```
 assert CustomerOrdersFulfilled {
