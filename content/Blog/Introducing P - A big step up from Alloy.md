@@ -9,7 +9,7 @@ That is, instead of defining how you know a certain outcome was reached, you def
 
 ### Will the Maple Leaf's get reverse swept by the Senators?
 
-P revolves around defining state machines and communicating between them using events. You can think of everything in life as some sort of machine. You are a machine that receives some inputs (food, sleep, exercise, cocaine, etc) and projects events out to the rest of the world (speaking to others, dancing, travelling, etc). 
+P revolves around defining state machines and communicating between them using events. You can think of everything in life as some sort of machine. You are a machine that receives some inputs (food, sleep, exercise, etc) and projects events out to the rest of the world (speaking to others, dancing, travelling, etc). 
 
 Here's a really simple example that showcases a lot of what P offers and helps me confront my lifelong Maple Leafs trauma. 3-0 is never enough.
 
