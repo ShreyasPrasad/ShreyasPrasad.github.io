@@ -1,4 +1,4 @@
-A lot of teams at AWS, my team included, use the AWS CDK to achieve infrastructure as code. Like all abstractions, the edges are rough. The CDK is not a one-size-fit-all solution. There are lots of almost hidden shortcomings that can sneak up on teams as their use case gets more complex over time. I've documented a few of these so hopefully your team can avoid manifesting spaghetti code.
+A lot of teams at AWS, my team included, use the AWS CDK to define infrastructure as code. Like all abstractions, the edges are rough. The CDK is not a one-size-fit-all solution. There are lots of hidden shortcomings that can sneak up on teams as their requirements become more complex. I've documented a few of these so your team can avoid manifesting spaghetti code.
 
 ### 1. Working with networking constructs is tricky
 
@@ -14,7 +14,7 @@ const vpc = new ec2.Vpc(this, 'TheVPC', {
 });
 ```
 
-The reason for this is that these fields tell the VPC how to allocate IP address space among subnets. By default, all IP address space is allocated to the first 3 subnets in a region, not leaving space for any more. That is, unless, you specify `reservedAzs` and `maxAzs` as this tells the VPC construct to reserve IP address space for subnets that are added in the future. There's a lot of subtle problems like this that only surface deep into your architecture implementation.
+The reason for this is that these fields tell the VPC how to allocate IP address space among subnets. By default, all IP address space is allocated to the first 3 subnets in a region, not leaving space for any more. That is, unless, you specify `reservedAzs` and `maxAzs` as this tells the VPC construct to reserve IP address space for subnets that are added in the future. There are a lot of subtle problems like this that only surface once you actually start coding.
 
 ### 2. Custom resources are more trouble then they're worth
 
