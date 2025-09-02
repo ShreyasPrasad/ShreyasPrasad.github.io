@@ -1,2 +1,0 @@
-
-Bananas are wonderful.
