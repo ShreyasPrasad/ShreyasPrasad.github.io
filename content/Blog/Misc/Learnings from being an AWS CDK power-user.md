@@ -2,7 +2,7 @@ A lot of teams at AWS, my team included, use the AWS CDK to define infrastructur
 
 ### 1. Working with networking constructs is tricky
 
-Working with AWS EC2 networking resources like VPCs, subnets, and CIDR blocks is *really* hard if you're attempting anything more than a basic setup. 
+Working with AWS EC2 networking resources like VPCs, subnets, and CIDR blocks is really hard if you're attempting anything more than a basic setup. 
 
 For example, the first time you define a VPC, you must specify the `reservedAzs` and `maxAzs` fields as high values (like 50). If you miss this during VPC creation, then you will not be able to easily add more subnets to the same VPC when they become available.  This is tracked in an [open GitHub issue](https://github.com/aws/aws-cdk/issues/6683) that appears to be getting no traction at all at the time of writing.
 
